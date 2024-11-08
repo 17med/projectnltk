@@ -1,1 +1,4 @@
 Flask
+PyMuPDF
+nltk
+flask_cors
