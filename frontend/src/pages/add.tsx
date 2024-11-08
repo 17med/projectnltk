@@ -38,7 +38,7 @@ const JobApplicationForm = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    // Create a FormData object to send form data and file
+    
     const form = new FormData();
     form.append("username", formData.name);
     form.append("email", formData.email);
@@ -50,7 +50,7 @@ const JobApplicationForm = () => {
     try {
       const response = await fetch("http://127.0.0.1:5000/upload", {
         method: "POST",
-        body: form, // Sending the form data
+        body: form, 
       });
 
       if (response.ok) {

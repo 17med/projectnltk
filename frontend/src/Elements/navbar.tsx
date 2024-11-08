@@ -1,4 +1,3 @@
-
 import { Navbar, Button, Container } from "react-bootstrap";
 import { FaUserPlus, FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -8,12 +7,10 @@ const ThemedNavbar = () => {
   return (
     <Navbar bg="white" expand="lg" className="shadow-sm py-3">
       <Container className="d-flex justify-content-between">
-        {/* Left Section: Brand Logo */}
         <Navbar.Brand href="/" className="text-primary fw-bold">
           JobPortal
         </Navbar.Brand>
 
-        {/* Right Section: Buttons */}
         <div className="d-flex">
           <Button
             variant="primary"

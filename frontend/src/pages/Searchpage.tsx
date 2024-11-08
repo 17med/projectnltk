@@ -43,14 +43,12 @@ const SearchPage = () => {
       <Container className="mt-5">
         <Row className="justify-content-center">
           <Col md={10} lg={8}>
-            {/* Outer main card */}
             <Card className="shadow-lg border-0 rounded-4 p-4">
               <Card.Body>
                 <h3 className="text-center text-primary mb-4">
                   Candidate Search
                 </h3>
 
-                {/* Search form */}
                 <Form className="mb-4">
                   <Form.Group controlId="formKeywords">
                     <Form.Label>Enter Keywords</Form.Label>
@@ -69,7 +67,6 @@ const SearchPage = () => {
                   </div>
                 </Form>
 
-                {/* Candidates list inside the main card */}
                 {filteredUsers.length === 0 ? (
                   <Card className="text-center p-3">
                     <p className="text-muted">No candidates found</p>
