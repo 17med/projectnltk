@@ -74,16 +74,16 @@ def searchx():
 
 @app.route('/show/<int:id>', methods=['GET'])
 def show_pdf(id):
-    # Create a filename based on the ID (you can adjust this logic)
+    
     filename = f'{id}.pdf'
 
-    # Check if the file exists in the PDF directory
+    
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     if os.path.exists(file_path):
-        # Serve the file if it exists
+        
         return send_from_directory(UPLOAD_FOLDER, filename)
     else:
-        # Return a 404 error if the file does not exist
+        
         abort(404, description="File not found")
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
