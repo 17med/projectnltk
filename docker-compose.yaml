@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   frontend:
-    image: 17med/jobportalfrontend:test
+    image: 17med/jobportalfrontend:latest
     ports:
       - "80:80"
     environment:
@@ -11,7 +11,7 @@ services:
       - projectnet
 
   backend:
-    image: 17med/jobportalbackend:test
+    image: 17med/jobportalbackend:latest
     container_name: backend
     ports:
       - "5000:5000"
