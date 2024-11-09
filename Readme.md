@@ -17,10 +17,6 @@ To test the JobPortal frontend, visit the live site hosted on Azure:
 
 [JobPortal Frontend](https://jobportalfrontend.azurewebsites.net)
 
-For adding new job descriptions, go directly to:
-
-[Add Job Description](https://jobportalfrontend.azurewebsites.net/add)
-
 ## Technologies Used
 
 ### Backend
@@ -42,4 +38,3 @@ For adding new job descriptions, go directly to:
 2. **Text Processing** – Tokenizes and lemmatizes data.
 3. **Index Creation** – Stores processed data in SQLite.
 4. **Keyword Search** – Search job descriptions via keywords.
-
