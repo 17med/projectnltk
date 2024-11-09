@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import {
   Form,
   Button,
@@ -38,7 +38,6 @@ const JobApplicationForm = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    
     const form = new FormData();
     form.append("username", formData.name);
     form.append("email", formData.email);
@@ -48,10 +47,13 @@ const JobApplicationForm = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/upload", {
-        method: "POST",
-        body: form, 
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/upload`,
+        {
+          method: "POST",
+          body: form,
+        }
+      );
 
       if (response.ok) {
         toast.success("applyed successfully!");

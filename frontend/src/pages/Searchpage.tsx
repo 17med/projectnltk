@@ -14,7 +14,9 @@ const SearchPage = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/search?query=${encodeURIComponent(keywords)}`,
+        `${import.meta.env.VITE_BACKEND_URL}/search?query=${encodeURIComponent(
+          keywords
+        )}`,
         {
           method: "GET",
         }
@@ -100,7 +102,8 @@ const SearchPage = () => {
                               variant="outline-primary"
                               onClick={() =>
                                 window.open(
-                                  "http://127.0.0.1:5000/show/" + user.id,
+                                  `${import.meta.env.VITE_BACKEND_URL}/show/` +
+                                    user.id,
                                   "_blank",
                                   "noopener"
                                 )

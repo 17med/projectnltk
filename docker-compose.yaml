@@ -2,19 +2,22 @@ version: "3.8"
 
 services:
   frontend:
-    image: 17med/jobportalfrontend:latest
+    image: 17med/jobportalfrontend:test
     ports:
       - "80:80"
+    environment:
+      - VITE_BACKEND_URL=http://backend:5000
     networks:
-      - my-network
+      - projectnet
 
   backend:
-    image: 17med/jobportalbackend:latest
+    image: 17med/jobportalbackend:test
+    container_name: backend
     ports:
       - "5000:5000"
     networks:
-      - my-network
+      - projectnet
 
 networks:
-  my-network:
+  projectnet:
     driver: bridge

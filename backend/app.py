@@ -8,7 +8,7 @@ from flask_cors import CORS, cross_origin
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'pdf'}
 app = Flask(__name__)
-cors = CORS(app, resources={r"/*": {"origins": "http://localhost:5173/"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
